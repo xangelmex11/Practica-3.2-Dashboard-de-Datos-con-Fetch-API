@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Datos - Fetch API</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard de Usuarios</h1>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Buscar por nombre (ej. Clementina)...">
+                <button id="btnLoad" class="btn btn-primary">Cargar Datos</button>
+                <button id="btnClear" class="btn btn-secondary">Limpiar</button>
+            </div>
+            <p id="statusMessage" class="status-message">Esperando acción...</p>
+        </header>
+
+        <div id="loader" class="loader-container" style="display: none;">
+            <div class="spinner"></div>
+            <p>⏳ Cargando datos...</p>
+        </div>
+
+        <div id="errorMessage" class="error-container" style="display: none;"></div>
+
+        <main id="dashboard" class="grid-dashboard"></main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
